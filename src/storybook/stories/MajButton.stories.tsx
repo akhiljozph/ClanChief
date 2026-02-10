@@ -12,7 +12,7 @@ type Story = StoryObj<typeof MajButton>;
 
 export const Primary: Story = {
     args: {
-        text: "Primary",
+        children: "Primary",
         variant: "primary",
         disabled: false,
         size: "small",
@@ -24,7 +24,7 @@ export const Primary: Story = {
 
 export const Secondary: Story = {
     args: {
-        text: "Secondary",
+        children: "Secondary",
         variant: "secondary",
         disabled: false,
         size: "small",
@@ -36,7 +36,7 @@ export const Secondary: Story = {
 
 export const Success: Story = {
     args: {
-        text: "Success",
+        children: "Success",
         variant: "success",
         disabled: false,
         size: "small",
@@ -48,7 +48,7 @@ export const Success: Story = {
 
 export const Danger: Story = {
     args: {
-        text: "Danger",
+        children: "Danger",
         variant: "danger",
         disabled: false,
         size: "small",
@@ -60,7 +60,7 @@ export const Danger: Story = {
 
 export const Warning: Story = {
     args: {
-        text: "Warning",
+        children: "Warning",
         variant: "warning",
         disabled: false,
         size: "small",
@@ -72,7 +72,7 @@ export const Warning: Story = {
 
 export const Info: Story = {
     args: {
-        text: "Info",
+        children: "Info",
         variant: "info",
         disabled: false,
         size: "small",
@@ -84,7 +84,7 @@ export const Info: Story = {
 
 export const Light: Story = {
     args: {
-        text: "Light",
+        children: "Light",
         variant: "light",
         disabled: false,
         size: "small",
@@ -96,7 +96,7 @@ export const Light: Story = {
 
 export const Dark: Story = {
     args: {
-        text: "Dark",
+        children: "Dark",
         variant: "dark",
         disabled: false,
         size: "small",
@@ -108,7 +108,7 @@ export const Dark: Story = {
 
 export const Link: Story = {
     args: {
-        text: "Link",
+        children: "Link",
         variant: "link",
         disabled: false,
         size: "small",
