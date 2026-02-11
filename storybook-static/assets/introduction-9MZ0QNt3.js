@@ -1,4 +1,0 @@
-import{j as e}from"./jsx-runtime-BjG_zV1W.js";import{useMDXComponents as i}from"./index-CHKtz2QT.js";import{M as r}from"./index-B0LBt8To.js";import"./index-BWu4c2F4.js";import"./iframe-CYAWvVVp.js";import"./index-B8jaNLVP.js";import"./index-4adcsI43.js";import"./index-DrFu-skq.js";function o(t){const n={h1:"h1",p:"p",...i(),...t.components};return e.jsxs(e.Fragment,{children:[e.jsx(r,{title:"Introduction"}),`
-`,e.jsx(n.h1,{id:"majui",children:"MajUi"}),`
-`,e.jsx(n.p,{children:`MajUi is a comprehensive component library designed to accelerate your UI development process while ensuring design consistency and quality.\r
-Packed with a rich collection of pre-built, reusable UI elements, MajUi empowers you to craft exceptional user experiences with unmatched efficiency.`})]})}function h(t={}){const{wrapper:n}={...i(),...t.components};return n?e.jsx(n,{...t,children:e.jsx(o,{...t})}):o(t)}export{h as default};
