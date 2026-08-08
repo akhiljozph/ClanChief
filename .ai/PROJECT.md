@@ -20,3 +20,17 @@ The application should:
 * Eliminate repetitive Excel manipulation and manual calculations through an easy-to-use interface.
 * Provide a clear and visually useful presentation of CWL player statistics.
 * Allow CWL statistics to be shared with clan members through a web link.
+
+## Non-Goals
+
+The following are explicitly outside the scope of Version 1:
+
+* Integration with the Clash of Clans API.
+* Automatic retrieval of player, war, or CWL data from Clash of Clans.
+* General clan management functionality.
+* Clan member management outside the information required for CWL statistics.
+* Attack reminders or notifications.
+* Chat or communication features.
+* Other Clash of Clans game statistics unrelated to CWL performance.
+
+All CWL data in Version 1 will be entered and maintained manually through the application.
