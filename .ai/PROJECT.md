@@ -34,3 +34,17 @@ The following are explicitly outside the scope of Version 1:
 * Other Clash of Clans game statistics unrelated to CWL performance.
 
 All CWL data in Version 1 will be entered and maintained manually through the application.
+
+## Target Users
+
+### CWL Administrator
+
+The administrator manages the CWL statistics application. The administrator can create CWL periods, manage the player roster, add or deactivate players, enter war participation and performance data, and view the resulting statistics.
+
+Only administrators can modify application data.
+
+### Clan Members
+
+Clan members are view-only users. They can access the application through a shared link, select a CWL period, search for players by name, and view the CWL summary and player performance statistics.
+
+Clan members cannot modify player, roster, or war data.
