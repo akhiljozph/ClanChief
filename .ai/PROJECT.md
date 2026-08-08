@@ -2,11 +2,11 @@
 
 This project is a React-based web application for managing and analyzing Clash of Clans Clan War League (CWL) player statistics.
 
-The application allows players to be maintained as a persistent roster while tracking their participation and performance separately for each CWL period. Each CWL period consists of seven wars, with player participation, attack usage, and stars recorded independently for every war.
+The application maintains a persistent roster of up to 50 players for each CWL period and tracks their participation and performance across seven wars. Each CWL has a configurable war size of 5, 15, or 30 players, and the selected players can be rotated independently for each war.
 
-The application provides a user-friendly interface for creating and managing CWL periods, maintaining the roster, recording war statistics, and viewing calculated player performance metrics.
+The application provides a user-friendly interface for creating and managing CWL periods, maintaining the roster, selecting players for individual wars, recording war statistics, and viewing calculated player performance metrics.
 
-Google Sheets will be used as the persistent data store, with a single spreadsheet containing a global player data tab and separate tabs for individual CWL periods.
+Google Sheets will be used as the persistent data store, with a single spreadsheet containing global player data and separate tabs for individual CWL periods.
 
 ## Goals
 
@@ -48,3 +48,78 @@ Only administrators can modify application data.
 Clan members are view-only users. They can access the application through a shared link, select a CWL period, search for players by name, and view the CWL summary and player performance statistics.
 
 Clan members cannot modify player, roster, or war data.
+
+## Core Capabilities
+
+### CWL Period Management
+
+* Create a new CWL period by specifying its month/name.
+* Configure the war size when creating the CWL.
+* Support war sizes of 5, 15, or 30 players.
+* Automatically create all seven wars when a new CWL period is created.
+* Select and view previously created CWL periods.
+* Carry forward the previous CWL roster and player active/inactive status when creating a new CWL.
+* Allow the administrator to add new players to the roster.
+* Allow the administrator to update player active/inactive status for the new CWL.
+
+### Player Management
+
+* Maintain a global player list with a persistent player ID, player name, and Town Hall level.
+* Add new players.
+* Update player information such as name and Town Hall level.
+* Preserve player identity across different CWL periods.
+* Maintain a maximum CWL roster of 50 players.
+* Mark players as active or inactive for an individual CWL period.
+* Display active players before inactive players.
+* Sort active players by Town Hall level.
+
+### War Player Selection
+
+For each of the seven wars:
+
+* Allow the administrator to select players from the CWL roster.
+* Display only active players in the war-selection interface.
+* Allow players to be rotated between different wars.
+* Enforce the configured war size for the CWL.
+* Prevent selecting more players than the configured war size.
+* Alert the administrator when attempting to select a player would exceed the configured war size.
+
+For example, if the CWL war size is configured as 5, no war can contain more than five selected players.
+
+### War Data Management
+
+For every selected player in every CWL war, the administrator can manually record:
+
+* Whether the player was added to the war.
+* Whether the player used their attack.
+* The number of stars scored.
+
+### Player Statistics
+
+The application calculates and displays player performance statistics, including:
+
+* Number of wars selected.
+* Number of attacks used.
+* Total stars scored.
+* Average stars per selected war.
+
+Statistics are calculated from the underlying war-level data rather than being manually stored.
+
+### Viewer Experience
+
+Viewers have read-only access to CWL statistics.
+
+They can:
+
+* Select a CWL period.
+* View the CWL player summary.
+* Search/filter players by name.
+* View each player's Town Hall level, wars selected, attacks used, total stars, and average stars.
+* View the statistics without being able to modify any data.
+
+### Data Persistence
+
+* Use a single Google Spreadsheet as the application's data store.
+* Maintain global player information in a dedicated player tab.
+* Maintain separate tabs for individual CWL periods.
+* Preserve historical CWL data when new CWL periods are created.
