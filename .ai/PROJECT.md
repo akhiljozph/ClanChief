@@ -123,3 +123,24 @@ They can:
 * Maintain global player information in a dedicated player tab.
 * Maintain separate tabs for individual CWL periods.
 * Preserve historical CWL data when new CWL periods are created.
+
+## Constraints
+
+The following business constraints apply to Version 1:
+
+* A CWL period contains exactly seven wars.
+* A CWL roster can contain a maximum of 50 players.
+* Each CWL has a configured war size of 5, 15, or 30 players.
+* The war size is selected when the CWL period is created.
+* The configured war size applies to every war within that CWL period.
+* Players can be rotated between wars.
+* Only players marked as active for the CWL can be selected for a war.
+* Inactive players must not be displayed in the war-selection interface.
+* The number of selected players for a war cannot exceed the configured war size.
+* The application must alert the administrator when a selection would exceed the configured war size.
+* Player identity is persistent across CWL periods.
+* Town Hall level is maintained as global player information.
+* CWL active/inactive status is period-specific.
+* War participation and performance are specific to each individual war.
+* Statistics must be calculated from the underlying war data.
+* Historical CWL data must remain available when new CWL periods are created.
