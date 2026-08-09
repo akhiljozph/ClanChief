@@ -90,12 +90,20 @@ For example, if the CWL war size is configured as 5, no war can contain more tha
 
 ### War Data Management
 
-For every selected player in every CWL war, the administrator can manually record:
+For every player in every CWL war, the administrator can manually record:
 
 * Whether the player was added to the war.
 * Whether the player used their attack.
 * The number of stars scored.
 * The destruction rate achieved in the war.
+
+Destruction rate is associated with the player's attack result.
+
+If a player was selected for a war but did not use their attack, their destruction rate for that war is treated as 0.
+
+If a player was not selected for the war, their destruction rate is also treated as 0.
+
+A destruction rate can only be recorded as a non-zero value when the player used their attack.
 
 ### Player Statistics
 
@@ -143,9 +151,11 @@ For example:
 * A player selected for 4 wars and scoring 11 stars has an average of 2.75 stars per selected war.
 * The player with the 2.75 average should be considered a stronger performer despite having fewer total stars.
 
-When players have comparable star performance, their destruction rates should be used as an additional comparison factor.
+When players have comparable star performance, cumulative destruction should be used as an additional comparison factor.
 
-Destruction rate is recorded separately for each war. For bonus-medal evaluation, the destruction rates from the player's selected and played wars are summed to produce a cumulative destruction score.
+Destruction rate is recorded for each individual war. A player who was selected but did not use their attack has a destruction rate of 0 for that war.
+
+The cumulative destruction score is the sum of the destruction rates across all seven wars, including 0 for wars where the player did not use an attack.
 
 When players have equivalent or comparable star performance, the player with the higher cumulative destruction score should rank higher for bonus-medal consideration.
 
