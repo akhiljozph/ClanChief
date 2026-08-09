@@ -4,9 +4,10 @@ This project is a React-based web application for managing and analyzing Clash o
 
 The application maintains a persistent roster of up to 50 players for each CWL period and tracks their participation and performance across seven wars. Each CWL has a configurable war size of 5, 15, or 30 players, and the selected players can be rotated independently for each war.
 
-The application provides a user-friendly interface for creating and managing CWL periods, maintaining the roster, selecting players for individual wars, recording war statistics, and viewing calculated player performance metrics.
+The application provides a user-friendly interface for creating and managing CWL periods, maintaining the roster, selecting players for individual wars, recording war statistics including stars and destruction rate, and viewing calculated player performance metrics.
 
 Google Sheets will be used as the persistent data store, with a single spreadsheet containing global player data and separate tabs for individual CWL periods.
+
 
 ## Goals
 
@@ -93,6 +94,7 @@ For every selected player in every CWL war, the administrator can manually recor
 * Whether the player was added to the war.
 * Whether the player used their attack.
 * The number of stars scored.
+* The destruction rate achieved in the war.
 
 ### Player Statistics
 
@@ -102,6 +104,8 @@ The application calculates and displays player performance statistics, including
 * Number of attacks used.
 * Total stars scored.
 * Average stars per selected war.
+
+The destruction rate for each individual war is stored as manually entered war-level performance data.
 
 Statistics are calculated from the underlying war-level data rather than being manually stored.
 
