@@ -1,4 +1,4 @@
-Read the following files before performing any task in ClanChief project.
+Read the following files from '.ai' directory before performing any task in ClanChief project.
 
  - PROJECT.md
  - ARCHITECTURE.md
