@@ -66,11 +66,16 @@ Clan members cannot modify player, roster, or war data.
 
 ### Player Management
 
-* Maintain a global player list with a persistent player ID, player name, and Town Hall level.
-* Add new players.
-* Update player information such as name and Town Hall level.
+* Maintain a global player list with a unique persistent player ID.
+* Player IDs must remain unchanged across all CWL periods.
+* Player names are associated with the global player record.
+* Different players may have the same display name; therefore, player ID must be used as the unique identifier.
+* Maintain the current Town Hall level as global player information.
+* When a new CWL is created, the player's current Town Hall level must be copied into that CWL as a historical snapshot.
+* Changes to a player's global Town Hall level must not modify Town Hall data in previously completed CWL periods.
+* A player's historical CWL record must preserve the Town Hall level that existed when that CWL record was created.
+* Add new players to the global player list.
 * Preserve player identity across different CWL periods.
-* Maintain a maximum CWL roster of 50 players.
 * Mark players as active or inactive for an individual CWL period.
 * Display active players before inactive players.
 * Sort active players by Town Hall level.
@@ -181,3 +186,7 @@ The following business constraints apply to Version 1:
 * War participation and performance are specific to each individual war.
 * Statistics must be calculated from the underlying war data.
 * Historical CWL data must remain available when new CWL periods are created.
+* Player ID is the unique identifier for a player, even when multiple players have the same display name.
+* Town Hall level is globally maintained but must be snapshotted for each CWL period.
+* Updating a player's global Town Hall level must never modify historical Town Hall values in previously completed CWL periods.
+* Historical CWL data must remain unchanged after the CWL has been completed.
