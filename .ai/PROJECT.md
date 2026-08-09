@@ -21,6 +21,7 @@ The application should:
 * Eliminate repetitive Excel manipulation and manual calculations through an easy-to-use interface.
 * Provide a clear and visually useful presentation of CWL player statistics.
 * Allow CWL statistics to be shared with clan members through a web link.
+* The application should support bonus-medal decision making by identifying players who demonstrate strong performance relative to the number of wars in which they were selected, rather than ranking players solely by total stars.
 
 ## Non-Goals
 
@@ -127,6 +128,28 @@ They can:
 * Maintain global player information in a dedicated player tab.
 * Maintain separate tabs for individual CWL periods.
 * Preserve historical CWL data when new CWL periods are created.
+
+### Bonus Medal Evaluation
+
+The application should provide statistics that help the administrator evaluate players for CWL bonus medals.
+
+Bonus-medal evaluation must not be based solely on total stars.
+
+Players who participate in fewer wars but demonstrate stronger average star performance should be considered alongside players who participate in more wars.
+
+For example:
+
+* A player selected for 7 wars and scoring 14 stars has an average of 2.00 stars per selected war.
+* A player selected for 4 wars and scoring 11 stars has an average of 2.75 stars per selected war.
+* The player with the 2.75 average should be considered a stronger performer despite having fewer total stars.
+
+When players have comparable star performance, their destruction rates should be used as an additional comparison factor.
+
+Destruction rate is recorded separately for each war. For bonus-medal evaluation, the destruction rates from the player's selected and played wars are summed to produce a cumulative destruction score.
+
+When players have equivalent or comparable star performance, the player with the higher cumulative destruction score should rank higher for bonus-medal consideration.
+
+The application should display the underlying statistics used for this evaluation so that the administrator can make the final bonus-medal decision.
 
 ## Constraints
 
