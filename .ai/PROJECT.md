@@ -63,6 +63,17 @@ Clan members cannot modify player, roster, or war data.
 * Carry forward the previous CWL roster and player active/inactive status when creating a new CWL.
 * Allow the administrator to add new players to the roster.
 * Allow the administrator to update player active/inactive status for the new CWL.
+* CWL name/month and war size are defined during creation and cannot be changed afterward.
+
+### CWL Completion
+
+* A CWL contains exactly seven wars.
+* The application automatically marks the CWL as completed when the administrator finishes entering the required data for all selected players in War 7.
+* A selected player who did not use their attack is considered complete with 0 stars and 0 destruction.
+* A selected player who used their attack must have both stars and destruction recorded before the CWL can be considered complete.
+* Players who were not selected for War 7 do not require war-performance data.
+* Completion status is determined automatically by the system and does not require a separate manual "Complete CWL" action.
+* Once a CWL is completed, its historical statistics must remain unchanged by updates to global player information.
 
 ### Player Management
 
@@ -190,3 +201,10 @@ The following business constraints apply to Version 1:
 * Town Hall level is globally maintained but must be snapshotted for each CWL period.
 * Updating a player's global Town Hall level must never modify historical Town Hall values in previously completed CWL periods.
 * Historical CWL data must remain unchanged after the CWL has been completed.
+* CWL name/month is immutable after creation.
+* CWL war size is immutable after creation.
+* CWL completion is determined automatically.
+* A CWL cannot be considered completed until all required War 7 player data has been entered.
+* For a selected player, Stars and Destruction are required only when the player used their attack.
+* A selected player who did not use their attack has 0 Stars and 0 Destruction.
+* Players not selected for a war do not require attack or performance data.
