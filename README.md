@@ -1,1 +1,3 @@
-# ClanChief
+# HumAssist
+
+#### Human Assistant
